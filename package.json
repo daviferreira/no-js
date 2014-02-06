@@ -1,0 +1,12 @@
+{
+  "name": "no-js",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daviferreira/no-js"
+  },
+  "devDependencies": {
+    "gulp": "~3.5.1",
+    "gulp-util": "~2.2.14"
+  }
+}
