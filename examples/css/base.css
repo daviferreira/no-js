@@ -12,6 +12,7 @@ body {
     width: 960px
 }
 
-.container-modal {
-    padding-top: 200px;
+.container-modal .btn-wrapper {
+    margin-top: 150px;
+    text-align: center;
 }
