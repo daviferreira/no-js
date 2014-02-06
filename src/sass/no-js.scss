@@ -3,7 +3,7 @@
 
 // Variables and mixins
 @import "_variables";
+@import "_mixins";
 
 // Components
-@import "overlay";
-@import "modal";
+@import "_modal";
