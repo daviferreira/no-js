@@ -8,7 +8,8 @@
     bottom: 0;
     left: 0;
     z-index: 10;
-    background: rgba(255, 255, 255, .6);
+    background-color: $green;
+    background-color: rgba($green, .6);
   }
   &:target {
     &:before {
@@ -29,8 +30,8 @@
   width: 360px;
   z-index: 11;
   background: #fefefe;
-  border-color: $gray-light;
-  border-color: rgba($gray, .4);
+  border-color: $green;
+  border-color: rgba($green, .4);
   border-style: solid;
   border-width: 6px;
   @include translate(0, -500%);
