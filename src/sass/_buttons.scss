@@ -1,0 +1,28 @@
+.btn {
+  display: inline-block;
+  min-width: 60px;
+  padding: 8px 15px;
+  position: relative;
+  background: $green;
+  border: $green-dark solid 1px;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  text-align: center;
+  @include transition(color .1s ease);
+  &:hover {
+    background: $green-dark;
+  }
+}
+
+.btn-close {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  color: $gray-light;
+  font-size: 30px;
+  text-decoration: none;
+  &:hover {
+     color: darken($gray-light, 10%);
+  }
+}

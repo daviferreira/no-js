@@ -2,8 +2,16 @@
 @import "compass/reset";
 
 // Variables and mixins
+@import "compass/css3";
 @import "_variables";
 @import "_mixins";
 
 // Components
+@import "_buttons";
 @import "_modal";
+
+// Sets default font-family to sans-serif
+html {
+  font-family: $sans-serif;
+}
+

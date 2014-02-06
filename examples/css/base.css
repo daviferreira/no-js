@@ -1,0 +1,17 @@
+body {
+    background-color: #f7f7f7;
+}
+
+.center {
+    text-align: center;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 40px;
+    width: 960px
+}
+
+.container-modal {
+    padding-top: 200px;
+}

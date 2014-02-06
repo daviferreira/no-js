@@ -1,77 +1,38 @@
-.btn {
-  background: $blue;
-  border: $blue-dark solid 1px;
-  border-radius: 3px;
-  color: #fff;
-  display: inline-block;
-  font-size: 14px;
-  padding: 8px 15px;
-  text-decoration: none;
-  text-align: center;
-  min-width: 60px;
-  position: relative;
-  @include transition(color .1s ease);
-
-  &:hover {
-    background: $blue-dark;
-  }
-
-  &.btn-bigi {
-    font-size: 18px;
-    padding: 15px 20px;
-    min-width: 100px;
-  }
-
-}
-
-.btn-close {
-  color: $gray-light;
-  font-size: 30px;
-  text-decoration: none;
-  position: absolute; right: 5px; top: 0;
-
-  &:hover {
-     color: darken($gray-light, 10%);
-  }
-
-}
-
 .modal {
-
   &:before {
     content: "";
     display: none;
-    background: rgba(0,0,0,.6);
     position: fixed;
-    top: 0; left: 0; right: 0; bottom: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 10;
+    background: rgba(255, 255, 255, .6);
   }
-
   &:target {
-
     &:before {
       display: block;
     }
-
     .modal-dialog {
-      @include translate(0, 0);
       top: 20%;
+      @include translate(0, 0);
     }
-
   }
-
 }
 
 .modal-dialog {
-  background: #fefefe;
-  border: $gray solid 1px;
-  border-radius: 5px;
   margin-left: -200px;
   position: fixed;
-  left: 50%;
   top: -100%;
-  z-index: 11;
+  left: 50%;
   width: 360px;
+  z-index: 11;
+  background: #fefefe;
+  border-color: $gray-light;
+  border-color: rgba($gray, .4);
+  border-style: solid;
+  border-width: 6px;
   @include translate(0, -500%);
   @include transition-transform(0.3s ease-out);
 }
@@ -87,15 +48,12 @@
 
 .modal-header {
   border-bottom: $gray-lighter solid 1px;
-
   h2 {
     font-size: 20px;
   }
-
 }
 
 .modal-footer{
   border-top: $gray-lighter solid 1px;
   text-align: right;
 }
-
