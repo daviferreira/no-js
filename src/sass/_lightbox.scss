@@ -1,145 +1,75 @@
-.lightbox-gallery{
-    width: 540px;
-    margin: 0 auto;
-    li {
-        float: left;
-        margin: 5px;
-        position: relative;
-        & > a,
-        & > a img {
-            display: block;
-        }
-        & > a {
-            width: 150px;
-            height: 150px;
-            position: relative;
-            padding: 10px;
-            background: $green;
-            span {
-                position: absolute;
-                width: 150px;
-                height: 150px;
-                top: 10px;
-                left: 10px;
-                background-color: $green-dark;
-                background-color: rgba($green-dark, .8);
-                color: $gray-lighter;
-                font-size: 24px;
-                line-height: 150px;
-                text-align: center;
-                @include transition(opacity .3s linear);
-                @include opacity(0);
-            }
-            &:hover span {
-                @include opacity(1);
-            }
-        }
+.thumb {
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    background: $green;
+    img {
+        display: block;
+    }
+    span {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        top: 10px;
+        left: 10px;
+        background-color: $green-dark;
+        background-color: rgba($green-dark, .8);
+        color: $gray-lighter;
+        font-size: 24px;
+        line-height: 150px;
+        text-align: center;
+        @include transition(opacity .3s linear);
+        @include opacity(0);
+    }
+    &:hover span {
+        @include opacity(1);
     }
 }
 
-.lightbox-overlay{
-    width: 0px;
-    height: 0px;
-    position: fixed;
-    overflow: hidden;
-    left: 0px;
-    top: 0px;
-    padding: 0px;
-    z-index: 99;
-    text-align: center;
-    background-color: $green;
-    background-color: rgba($green, .8);
-    & > div{
-        margin: 10px auto 0px auto;
-        position: relative;
-        width: 550px;
-        @include opacity(0);
-        @include transition(opacity .3s linear 1.3s);
-    }
-    div {
-        h3, p {
-            padding: 0px 20px;
-            width: 200px;
-            height: 60px;
-        }
-        h3 span, p {
-            font-size: 16px;
-            font-style: italic;
-        }
-        h3 span {
-            display: block;
-            line-height: 6px;
-        }
-        h3 {
-            font-size: 36px;
-            float: left;
-            text-align: right;
-            border-right: 1px solid rgba(27,54,81,0.4);
-        }
-        p {
-            text-align: left;
-            float: left;
-            width: 260px;
-        }
-    }
-    img {
-        max-height: 100%;
-        position: relative;
-        @include box-shadow(1px 1px 4px rgba(#000, .3));
+.lightbox {
+    &:before {
+        @extend %overlay;
     }
     &:target {
-        width: auto;
-        height: auto;
-        bottom: 0;
-        right: 0;
-        padding: 80px 100px 120px 100px;
+        display: block;
+        &:before,
+        .lightbox-content {
+          display: block;
+        }
     }
 }
 
-.lightbox-overlay:target img {
-    -webkit-animation: fadeInScale .5s ease-in-out;
-    -moz-animation: fadeInScale .5s ease-in-out;
-    -o-animation: fadeInScale .5s ease-in-out;
-    -ms-animation: fadeInScale .5s ease-in-out;
-    animation: fadeInScale .5s ease-in-out;
-}
-
-.lightbox-overlay:target a.lightbox-close,
-.lightbox-overlay:target > div{
-    opacity: 1;
-    filter: alpha(opacity=99); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
-}
-
-@-webkit-keyframes fadeInScale {
-  0% { -webkit-transform: scale(0.6); opacity: 0; }
-  100% { -webkit-transform: scale(1); opacity: 1; }
-}
-
-@-moz-keyframes fadeInScale {
-  0% { -moz-transform: scale(0.6); opacity: 0; }
-  100% { -moz-transform: scale(1); opacity: 1; }
-}
-
-@-o-keyframes fadeInScale {
-  0% { -o-transform: scale(0.6); opacity: 0; }
-  100% { -o-transform: scale(1); opacity: 1; }
-}
-
-@-ms-keyframes fadeInScale {
-  0% { -ms-transform: scale(0.6); opacity: 0; }
-  100% { -ms-transform: scale(1); opacity: 1; }
-}
-
-@keyframes fadeInScale {
-  0% { transform: scale(0.6); opacity: 0; }
-  100% { transform: scale(1); opacity: 1; }
-}
-
-/*
-    100% Height for Opera as the max-height seems to be ignored, not optimal for large screens
-    http://bricss.net/post/11230266445/css-hack-to-target-opera
-*/
-x:-o-prefocus, .lightbox-overlay img {
+.lightbox-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    padding: 80px 40px 120px;
+    z-index: 11;
+    @include box-sizing(border-box);
+    .btn-close {
+        top: 15px;
+        right: 15px;
+        font-size: 40px;
+        line-height: 20px;
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+        max-height: 100%;
+    }
+    .lightbox-meta-data {
+        padding: 20px;
+        position: fixed;
+        height: 80px;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        background-color: rgba(#000, .8);
+        color: #fff;
+        @include box-sizing(border-box);
+    }
 }

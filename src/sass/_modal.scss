@@ -1,58 +1,51 @@
 .modal {
-  &:before {
-    content: "";
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    background-color: $green;
-    background-color: rgba($green, .6);
-  }
-  &:target {
     &:before {
-      display: block;
+        @extend %overlay;
     }
-    .modal-dialog {
-      top: 20%;
-      @include translate(0, 0);
+    &:target {
+        &:before {
+            display: block;
+        }
+        .modal-dialog {
+            top: 20%;
+            @include translate(0, 0);
+        }
     }
-  }
 }
 
 .modal-dialog {
-  margin-left: -200px;
-  position: fixed;
-  top: -100%;
-  left: 50%;
-  width: 360px;
-  z-index: 11;
-  background: #fefefe;
-  border-color: $green;
-  border-color: rgba($green, .4);
-  border-style: solid;
-  border-width: 6px;
-  @include translate(0, -500%);
-  @include transition-transform(0.3s ease-out);
+    margin-left: -200px;
+    position: fixed;
+    top: -100%;
+    left: 50%;
+    width: 360px;
+    z-index: 11;
+    background: #fefefe;
+    border-color: $green;
+    border-color: rgba($green, .4);
+    border-style: solid;
+    border-width: 6px;
+    @include translate(0, -500%);
+    @include transition-transform(0.3s ease-out);
 }
 
 .modal-body {
-  padding: 20px;
+    padding: 20px;
 }
 
 .modal-header,
 .modal-footer {
-  padding: 10px 20px;
+    padding: 10px 20px;
 }
 
 .modal-header {
-  border-bottom: $gray-lighter solid 1px;
-  h2 {
-    font-size: 20px;
-  }
+    border-bottom: $gray-lighter solid 1px;
+    h2 {
+        font-size: 20px;
+    }
 }
 
 .modal-footer{
-  border-top: $gray-lighter solid 1px;
-  text-align: right;
+    border-top: $gray-lighter solid 1px;
+    text-align: right;
 }
