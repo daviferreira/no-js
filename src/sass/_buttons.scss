@@ -21,9 +21,26 @@
   top: 0;
   color: $gray-light;
   font-size: 30px;
-  line-height: 15px;
   text-decoration: none;
   &:hover {
      color: darken($gray-light, 10%);
   }
+}
+
+.btn-close-circle {
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 33px;
+    text-align: center;
+    @include border-radius(50%);
+    @include box-sizing(border-box);
+    &:hover {
+        color: #000;
+    }
 }

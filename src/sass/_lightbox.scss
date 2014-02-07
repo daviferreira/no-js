@@ -49,12 +49,6 @@
     padding: 80px 40px 120px;
     z-index: 11;
     @include box-sizing(border-box);
-    .btn-close {
-        top: 15px;
-        right: 15px;
-        font-size: 40px;
-        line-height: 20px;
-    }
     img {
         display: block;
         margin: 0 auto;
