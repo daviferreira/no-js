@@ -17,13 +17,7 @@ body {
     text-align: center;
 }
 
-.dummy-image {
-    width: 600px;
-    height: 600px;
-    background-color: #57ad68;
-}
-
-.dummy-image-small {
-    width: 150px;
-    height: 150px;
+.container-lightbox a {
+    float: left;
+    margin: 10px;
 }

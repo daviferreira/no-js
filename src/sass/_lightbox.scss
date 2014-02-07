@@ -4,7 +4,6 @@
     }
     &:target {
         display: block;
-        @include animation(fadein, .3s);
         &:before,
         .lightbox-content {
           display: block;
@@ -20,7 +19,7 @@
     width: 100%;
     height: 100%;
     padding: 80px 40px 120px;
-    z-index: 11;
+    z-index: 20;
     @include box-sizing(border-box);
     img {
         display: block;
