@@ -32,6 +32,7 @@
     }
     &:target {
         display: block;
+        @include animation(fadein, .3s);
         &:before,
         .lightbox-content {
           display: block;
@@ -53,6 +54,8 @@
         display: block;
         margin: 0 auto;
         max-height: 100%;
+        @include border-radius(3px);
+        @include box-shadow(0 0 4px #000);
     }
     .lightbox-meta-data {
         padding: 20px;
@@ -65,5 +68,12 @@
         background-color: rgba(#000, .8);
         color: #fff;
         @include box-sizing(border-box);
+        h3 {
+            font-size: 20px;
+        }
+        p {
+            margin-top: 4px;
+            font-weight: 300;
+        }
     }
 }

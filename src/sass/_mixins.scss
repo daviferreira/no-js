@@ -11,6 +11,14 @@
           transition: transform $transition;
 }
 
+@mixin animation($animation, $duration) {
+    -webkit-animation: $animation $duration;
+       -moz-animation: $animation $duration;
+        -ms-animation: $animation $duration;
+         -o-animation: $animation $duration;
+            animation: $animation $duration;
+}
+
 %overlay {
     content: "";
     display: none;
