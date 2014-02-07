@@ -19,6 +19,12 @@
             animation: $animation $duration;
 }
 
+@mixin vertical-align {
+    position: relative;
+    top: 50%;
+    @include transform(translateY(-50%));
+}
+
 %overlay {
     content: "";
     display: none;
