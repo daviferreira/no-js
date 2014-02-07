@@ -10,8 +10,9 @@ No JS.
 
 ## TODO
 
-* menu
 * lightbox pagination
+* lightbox transition
+* menu
 * carousel
 * tab
 * buttons

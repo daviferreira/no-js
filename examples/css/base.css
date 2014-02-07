@@ -17,6 +17,10 @@ body {
     text-align: center;
 }
 
+.container-lightbox {
+    width: 570px;
+}
+
 .container-lightbox a {
     float: left;
     margin: 10px;
