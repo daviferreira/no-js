@@ -7,10 +7,10 @@ No JS.
 
 * simple modal
 * simple lightbox
+* lightbox pagination
 
 ## TODO
 
-* lightbox pagination
 * lightbox transition
 * menu
 * carousel

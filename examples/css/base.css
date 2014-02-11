@@ -21,7 +21,7 @@ body {
     width: 570px;
 }
 
-.container-lightbox a {
+.container-lightbox > a {
     float: left;
     margin: 10px;
 }

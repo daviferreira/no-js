@@ -50,3 +50,30 @@
         }
     }
 }
+
+.lightbox-navigation {
+    float: right;
+    margin: 6px 0 0;
+}
+
+.lightbox-navigation-button {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 0 15px 26px;
+    border-color: transparent transparent transparent $gray-light;
+    @include transition(border-color .2s linear);
+    &:hover {
+        border-color: transparent transparent transparent #fff;
+    }
+}
+
+.lightbox-navigation-previous {
+    margin-right: 12px;
+    border-width: 15px 26px 15px 0;
+    border-color: transparent $gray-light transparent transparent;
+    &:hover {
+        border-color: transparent #fff transparent transparent;
+    }
+}
