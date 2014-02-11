@@ -42,10 +42,12 @@
         color: #fff;
         @include box-sizing(border-box);
         h3 {
-            font-size: 20px;
+            font-size: 22px;
+            font-weight: 900;
         }
         p {
             margin-top: 4px;
+            font-size: 14px;
             font-weight: 300;
         }
     }
