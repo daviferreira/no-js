@@ -14,7 +14,8 @@ No JS.
 * lightbox transition
 * menu
 * carousel
-* tab
+* tabs
+* accordion
 * buttons
 * animations
 * mosaic
