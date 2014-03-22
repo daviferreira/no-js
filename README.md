@@ -1,7 +1,7 @@
 no-js
 =====
 
-No JS aims to be a set of components for web apps and sites (such as
+no-js aims to be a set of components for web apps and sites (such as
 modals, lightbox, tabs and menus) written purely using CSS, with no JavaScript.
 
 It's still on a very early development stage and any extra help would
