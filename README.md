@@ -1,7 +1,11 @@
 no-js
 =====
 
-No JS.
+No JS aims to be a set of components for web apps and sites (such as
+modals, lightbox, tabs and menus) written purely using CSS, with no JavaScript.
+
+It's still on a very early development stage and any extra help would
+be really great :)
 
 ## Done
 
@@ -9,12 +13,16 @@ No JS.
 * simple lightbox
 * lightbox pagination
 
+## In progress
+
+* tabs
+
 ## TODO
 
+* custom/regular style
 * lightbox transition
 * menu
 * carousel
-* tabs
 * accordion
 * buttons
 * animations
